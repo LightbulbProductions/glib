@@ -1,0 +1,49 @@
+<% provide(:about_active, 'active') %>
+<div class="container">
+
+  <div id="profile-header">
+    <div>
+      <div id="profile-picture-container">
+        <div>
+          <%= image_tag('meside.jpg', id: "profile-picture") %>
+        </div>
+      </div>
+      <div id="profile-links">
+	         <%= render 'profile_links' %>
+	       </div>
+	     </div>
+	   </div>
+  
+	    <div class="section" id="about-me">
+	       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"
+	               id="about-me-description">
+	         <%= render 'about_me_description' %>
+	       </div>
+	     </div>
+
+	     <%= render partial: 'layouts/shared/section_header',
+	                locals: { header_class: "col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2",
+	                          header_title: "Photography" }
+	     %>
+
+	     <div class="section" id="photography">
+	       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"
+	               id="album-list">
+	         <%= render 'album_list' %>
+	       </div>
+	     </div>
+
+	     <%= render partial: 'layouts/shared/section_header',
+	                locals: { header_class: "col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2",
+	                          header_title: "Authors and Philosophical Leanings" }
+	     %>
+
+	     <div class="section" id="projects">
+	       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"
+	               id="authors-list">
+	         <%= render 'authors_list' %>
+	       </div>
+	     </div>
+
+	   </div>
+       

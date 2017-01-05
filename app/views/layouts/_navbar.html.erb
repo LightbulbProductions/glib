@@ -1,0 +1,25 @@
+<% unless action_name == "homepage" %>
+  <nav>
+    <div class="site-width">
+      <a href="" target="_blank">Michelle Gerber</a>
+      <span class="menu icon" title="Menu (Esc)" tabindex="0" data-icon="m"><span>Menu</span></span>
+    <div>
+
+	<div id="navigation">
+     <ul>
+	   <li class='list-group-item'>
+ 		<%= link_to "Projects", projects_path, class:"nav-link #{yield(:projects_active)}" %>
+   	   </li>
+	   <li class="list-group-item">
+	 	<%= link_to "About", about_path, class:"nav-link #{yield(:about_active)}" %>
+	   </li>
+	   <li class="list-group-item">
+		<%= link_to "Contact", contact_path, class:"nav-link #{yield(:contact_active)}" %>
+	   </li>
+	  <% end %>
+	 </ul>
+	</div>
+	</div>
+  </nav>
+
+
